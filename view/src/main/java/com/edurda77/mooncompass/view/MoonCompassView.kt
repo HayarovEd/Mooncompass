@@ -19,7 +19,7 @@ class MoonCompassView
 constructor(
     context: Context,
     attrs: AttributeSet? = null,
-    defaultStyle: Int = R.style.SolarCompassViewDefaultStyle,
+    defaultStyle: Int = R.style.MoonCompassViewDefaultStyle,
 ) : View(context, attrs, defaultStyle) {
 
     private val paint: Paint

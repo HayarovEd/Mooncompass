@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="SolarCompassViewDefaultStyle">
+    <style name="MoonCompassViewDefaultStyle">
         <item name="indicator_size">25dp</item>
         <item name="indicator_color">@color/solarCompassIndicatorColor</item>
         <item name="indicator_drawable">@drawable/moon_111148</item>
