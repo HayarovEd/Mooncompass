@@ -33,9 +33,9 @@ val azimuth = azimuthCalculator.calculateAzimuthFor(
 
 The library provides View implementation of the solar compass
 
-Add `SolarCompassView` to the layout:
+Add `MoonCompassView` to the layout:
 ```xml
-<com.edurda77.solarcompass.view.MoonCompassView
+<com.edurda77.mooncompass.view.MoonCompassView
     android:id="@+id/compass"
     android:layout_width="match_parent"
     android:layout_height="match_parent" />
