@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="SolarCompassViewDefaultStyle">
+        <item name="indicator_size">25dp</item>
+        <item name="indicator_color">@color/solarCompassIndicatorColor</item>
+        <item name="indicator_drawable">@drawable/ic_solar_compass_indicator</item>
+    </style>
+</resources>
