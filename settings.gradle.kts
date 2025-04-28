@@ -19,6 +19,9 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Mooncompass"
+rootProject.name = "moon-compass"
+includeBuild("build-logic")
 include(":app")
- 
+include(":common")
+include(":view")
+include(":compose")
