@@ -20,5 +20,6 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "Mooncompass"
+includeBuild("build-logic")
 include(":app")
- 
+include(":common")
