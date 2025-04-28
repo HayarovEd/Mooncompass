@@ -32,7 +32,7 @@ import kotlinx.coroutines.launch
 
 
 @Composable
-fun SolarCompass(
+fun MoonCompass(
     modifier: Modifier = Modifier.fillMaxSize(),
     azimuth: Double,
     indicatorContent: @Composable () -> Unit,
@@ -45,7 +45,7 @@ fun SolarCompass(
 }
 
 @Composable
-fun SolarCompass(
+fun MoonCompass(
     modifier: Modifier = Modifier.fillMaxSize(),
     azimuth: Double,
     indicatorPainter: Painter = rememberVectorPainter(
@@ -54,7 +54,7 @@ fun SolarCompass(
     indicatorSize: Dp = 25.dp,
     indicatorColorFilter: ColorFilter = ColorFilter.tint(Color.Gray),
 ) {
-    SolarCompass(azimuth = azimuth, modifier = modifier) {
+    MoonCompass(azimuth = azimuth, modifier = modifier) {
         Image(
             indicatorPainter,
             contentDescription = null,
@@ -103,7 +103,7 @@ internal fun SolarCompassPreview() {
                 }
             }
 
-            SolarCompass(
+            MoonCompass(
                 azimuth = azimuth,
                 modifier = Modifier.fillMaxSize(),
             )
