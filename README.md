@@ -53,7 +53,7 @@ binding.compass.setMoonAzimuth(
 
 The View provides ability to configure indicator using attributes. Complete example:
 ```xml
-<com.edurda77.solarcompass.view.MoonCompassView
+<com.edurda77.mooncompass.view.MoonCompassView
     android:id="@+id/compass"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
