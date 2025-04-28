@@ -4,6 +4,6 @@
     <style name="SolarCompassViewDefaultStyle">
         <item name="indicator_size">25dp</item>
         <item name="indicator_color">@color/solarCompassIndicatorColor</item>
-        <item name="indicator_drawable">@drawable/ic_solar_compass_indicator</item>
+        <item name="indicator_drawable">@drawable/moon_111148</item>
     </style>
 </resources>

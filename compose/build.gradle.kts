@@ -1,10 +1,10 @@
 plugins {
-    id("com.edurda77.android.library")
+    id("com.edurda77.android.library.compose")
     id("com.edurda77.android.library.publication")
 }
 
 android {
-    namespace = "com.edurda77.mooncompass.compose"
+    namespace = "com.edurda77.mooncompass.view"
 
     buildTypes {
         release {

@@ -6,16 +6,14 @@ import android.graphics.Canvas
 import android.graphics.Paint
 import android.util.AttributeSet
 import android.view.View
+import com.edurda77.mooncompass.common.calculateIndicatorPosition
 import androidx.core.content.res.getColorOrThrow
 import androidx.core.content.res.getDimensionPixelSizeOrThrow
 import androidx.core.content.res.getDrawableOrThrow
 import androidx.core.graphics.drawable.toBitmap
+import com.edurda77.mooncompass.compose.R
 
-/**
- * View that displays solar indicator on its edges based on the azimuth.
- *
- * Use [setSolarAzimuth] to provide azimuth for the View
- */
+
 class MoonCompassView
 @JvmOverloads
 constructor(
@@ -35,7 +33,7 @@ constructor(
     init {
         val typedArray = context.obtainStyledAttributes(
             attrs,
-            R.styleable.SolarCompassView,
+            R.styleable.MoonCompassView,
             0,
             defaultStyle,
         )
@@ -43,12 +41,12 @@ constructor(
         paint = Paint()
 
         val sunDrawable = typedArray
-            .getDrawableOrThrow(R.styleable.SolarCompassView_indicator_drawable).mutate().apply {
-                setTint(typedArray.getColorOrThrow(R.styleable.SolarCompassView_indicator_color))
+            .getDrawableOrThrow(R.styleable.MoonCompassView_indicator_drawable).mutate().apply {
+                setTint(typedArray.getColorOrThrow(R.styleable.MoonCompassView_indicator_color))
             }
 
         indicatorSize = typedArray.getDimensionPixelSizeOrThrow(
-            R.styleable.SolarCompassView_indicator_size,
+            R.styleable.MoonCompassView_indicator_size,
         )
 
         indicatorBitmap = sunDrawable.toBitmap(indicatorSize, indicatorSize)
@@ -64,11 +62,6 @@ constructor(
         canvas.drawBitmap(indicatorBitmap, indicatorLeft, indicatorTop, paint)
     }
 
-    /**
-     * Set current solar azimuth
-     *
-     * @param azimuth azimuth in degrees
-     */
     fun setSolarAzimuth(azimuth: Double) {
         this.azimuth = azimuth
         val position = calculateIndicatorPosition(
